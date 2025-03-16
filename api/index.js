@@ -7,6 +7,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", async (req, res) =>{
+  res.send("This is my api runing...")
+})
+
 app.post("/generate", async (req, res) => {
   const userInput = req.body.text;
 
